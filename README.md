@@ -1,5 +1,5 @@
 # GitR-API
-This repo is for all the students of GITAM who want to automate things they normally do on XLearn . This is basically a quick little scrapper !
+This repo is for all the students of GITAM who want to automate things they normally do on XLearn . This is basically a quick little scrapper ! The main package used for scrapping is jsoup . Definitely check it out , the link is at the end of this document.
 
 # How to use this API ?
 
@@ -60,18 +60,24 @@ The data is stored in form of these **primary blocks** .
   
 ## Threading :
   While scrapping , one can use simple loop to go through every course and get its attendance, resources and assignments , but when done in such a way , the whole process would take about 50 seconds ( For an average of 8 courses ).
-  
-  Hence, in this API, there are lot of threads involved :
-    1. One CourseRetriever thread per course is started in the getCourses()
+Hence, in this API, there are lot of threads involved :
+- One CourseRetriever thread per course is started in the getCourses()
+- Each such thread invoked further invokes 3 threads:
+  - One ResourceRetiever Thread
+  - One AttendanceRetriever Thread and
+  - One AssignmentRetriever Thread
     
-    2. Each such thread invoked further invokes 2 threads : 1 AssignmentRetriever and 1 ResourceRetiever.
-  
-  Hence a total of 3 threads per course run simultaneously. This may affect the performance a bit but if the conditions are ideal, the time comes down to a mere 6~9 seconds !
+Hence a total of 3 threads per course run simultaneously. This may affect the performance a bit but if the conditions are ideal, the time comes down to a mere 6~9 seconds !
 
 The overall thing takes place like this : 
+![Threads](https://cloud.githubusercontent.com/assets/19271795/22854391/a5fcac6c-f093-11e6-8948-38a800516606.png)
 
 This is just the very basic stuff you can do with the data you have !
 You can use this to develop some cool applications . You can checkout GitX , an android app which uses this API to give the students their details in a classic look. https://play.google.com/store/apps/details?id=sevenfront.gitx
+
+___
+
+I hope the content above makes some sense 😄 . Feel free to use it to build your own applications . I would recommend you to go through the code once ,  its quite easy and understandable . For reference https://jsoup.org/ .
 
 
 
