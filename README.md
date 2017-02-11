@@ -77,7 +77,7 @@ You can use this to develop some cool applications . You can checkout GitX , an 
 
 ___
 
-I hope the content above makes some sense 😄 . Feel free to use it to build your own applications . I would recommend you to go through the code once ,  its quite easy and understandable . For reference https://jsoup.org/ .
+I hope the content above makes some sense 😄 . Feel free to use it to build your own applications . I would recommend you to go through the code once ,  its quite easy and understandable . Check this out - [Jsoup](https://jsoup.org/).
 
 
 
