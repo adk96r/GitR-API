@@ -3,7 +3,7 @@ This repo is for all the students of GITAM who want to automate things they norm
 
 # How to use this API ?
 
-Before you can see the your data fromyou X-Learn you must ofcourse login first . This can be done by :
+Before you can see the your data on your X-Learn, you must first login ( obviously ) . This can be done by :
 ```java
    int status = login(username, password);
 ```
